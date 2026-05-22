@@ -2,14 +2,16 @@
 name: react-architecture
 description: >
   Scaffold and enforce a scalable React project architecture with opinionated folder structure.
-  Use this skill whenever the user wants to: create a new React/Next.js/Vite project structure,
-  add pages or features to an existing project, generate boilerplate for routes/components/hooks,
-  organize their codebase into a feature-based architecture, or asks about best practices for
-  structuring a React app. Also triggers for: "how should I organize my React project",
-  "create a new page", "add a feature", "scaffold login page", "set up folder structure",
-  "next.js structure", "vite project structure", or any mention of pages/, features/, routes/,
-  app router, or the feature-page pattern. Even if the user only asks for one part
-  (e.g. "create a login page"), apply the full architecture pattern.
+  Use this skill whenever the user wants to: create a new React/Next.js/Vite project structure...
+version: "1.0.0"
+author: "SudacaDev"
+tags: ["react", "architecture", "nextjs", "vite"]
+references:
+  - "references/nextjs-app.md"
+  - "references/nextjs-pages.md"
+  - "references/vite.md"
+  - "references/templates.md"
+  - "references/patterns.md"
 ---
 
 # React Architecture Skill
