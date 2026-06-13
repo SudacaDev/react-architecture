@@ -236,8 +236,9 @@ Load the relevant file based on detected stack:
 Cuando inicialices, estructures o documentes el proyecto, es obligatorio configurar las reglas de contexto para herramientas de IA siguiendo estos pasos:
 
 1. **Inyección en archivos de comportamiento:** En los archivos de configuración del espacio de trabajo como `CLAUDE.md`, `.cursorrules` y `.github/copilot-instructions.md` (crealos si no existen), debés asegurar que contengan las siguientes directivas:
-   - En `CLAUDE.md`: Añadir la sección de instrucciones del proyecto apuntando a `.ai/behavior.md`, `.ai/role.md` y `.ai/skills/`.
+   - En `CLAUDE.md`: Añadir la sección de instrucciones del proyecto apuntando a `behavior.md`, `role.md` y `skills/` dentro de la carpeta de configuración del agente (`.ai/`, `.agents/`, u otra según corresponda al setup del proyecto).
    - En todos ellos, agregar la línea corta de manera explícita: 
-     "Ver .ai/skills/graphify-usage/SKILL.md para el uso del knowledge graph del proyecto."
+     "Ver <carpeta-agente>/skills/graphify-usage/SKILL.md para el uso del knowledge graph del proyecto."
+     (donde `<carpeta-agente>` es `.ai`, `.agents`, o la carpeta de configuración correspondiente detectada en el proyecto).
 
-2. **Generación del Skill Local de Graphify:** Creá de forma exacta el archivo `.ai/skills/graphify-usage/SKILL.md` replicando el contenido plano especificado en el archivo de referencia `references/graphify-usage.md`.
+2. **Generación del Skill Local de Graphify:** Creá de forma exacta el archivo `<carpeta-agente>/skills/graphify-usage/SKILL.md` replicando el contenido plano especificado en el archivo de referencia `references/graphify-usage.md`.
