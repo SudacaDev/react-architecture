@@ -3,7 +3,7 @@ name: react-architecture
 description: >
   Scaffold and enforce a scalable React project architecture with opinionated folder structure.
   Use this skill whenever the user wants to: create a new React/Next.js/Vite project structure...
-version: "1.0.0"
+version: "1.1.0"
 author: "SudacaDev"
 tags: ["react", "architecture", "nextjs", "vite"]
 references:
@@ -12,6 +12,7 @@ references:
   - "references/vite.md"
   - "references/templates.md"
   - "references/patterns.md"
+  - "references/graphify-usage.md"
 ---
 
 # React Architecture Skill
@@ -229,3 +230,14 @@ Load the relevant file based on detected stack:
 - `references/vite.md` — Vite + React Router: main.tsx, createBrowserRouter, protected routes
 - `references/templates.md` — Shared boilerplate: hooks, api, services, store, ui components
 - `references/patterns.md` — Advanced: protected routes, lazy loading, barrel exports, error boundaries
+
+## Configuración de Entorno y Knowledge Graph (Graphify)
+
+Cuando inicialices, estructures o documentes el proyecto, es obligatorio configurar las reglas de contexto para herramientas de IA siguiendo estos pasos:
+
+1. **Inyección en archivos de comportamiento:** En los archivos de configuración del espacio de trabajo como `CLAUDE.md`, `.cursorrules` y `.github/copilot-instructions.md` (crealos si no existen), debés asegurar que contengan las siguientes directivas:
+   - En `CLAUDE.md`: Añadir la sección de instrucciones del proyecto apuntando a `.ai/behavior.md`, `.ai/role.md` y `.ai/skills/`.
+   - En todos ellos, agregar la línea corta de manera explícita: 
+     "Ver .ai/skills/graphify-usage/SKILL.md para el uso del knowledge graph del proyecto."
+
+2. **Generación del Skill Local de Graphify:** Creá de forma exacta el archivo `.ai/skills/graphify-usage/SKILL.md` replicando el contenido plano especificado en el archivo de referencia `references/graphify-usage.md`.
